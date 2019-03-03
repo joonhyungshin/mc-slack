@@ -140,7 +140,7 @@ def send_mc_status(address, query_type, response_url, response_type='ephemeral')
     except (OSError, ConnectionRefusedError, AttributeError):
         error_msg = 'Failed to fetch server data. '
         if query_type == 'query':
-            error_msg += 'Maybe the server do not allow queries?'
+            error_msg += 'Maybe the server does not allow queries?'
         else:
             error_msg += 'Maybe there is a mistake in address?'
 
