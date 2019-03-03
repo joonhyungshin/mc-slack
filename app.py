@@ -45,7 +45,6 @@ def send_slack_message(hook_url, payload):
 
 
 def send_mc_status(address, query_type, response_url, response_type='ephemeral'):
-    print(address)
     server = MinecraftServer.lookup(address)
     try:
         if query_type == 'status':
