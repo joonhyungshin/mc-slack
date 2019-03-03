@@ -140,9 +140,9 @@ def send_mc_status(address, query_type, response_url, response_type='ephemeral')
     except (OSError, ConnectionRefusedError, AttributeError):
         error_msg = 'Failed to fetch server data. '
         if query_type == 'query':
-            error_msg += 'Maybe the server does not allow queries?'
+            error_msg += 'Perhaps the server does not allow queries?'
         else:
-            error_msg += 'Maybe there is a mistake in address?'
+            error_msg += 'Perhaps there is a mistake in address?'
 
         send_slack_message(response_url, {
             'response_type': response_type,
