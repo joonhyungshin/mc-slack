@@ -194,6 +194,8 @@ def check_mc_status():
             'text': response_msg
         }
         return jsonify(payload), 200
+    else:
+        return Response(status=403)
 
 
 if __name__ == '__main__':
